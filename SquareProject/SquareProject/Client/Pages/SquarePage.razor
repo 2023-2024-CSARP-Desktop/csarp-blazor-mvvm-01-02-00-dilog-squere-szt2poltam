@@ -21,6 +21,17 @@
     </EditForm>
 }
 
+@if (ViewModel != null)
+{
+    <div class="card mt-2 p-2">
+        <h5 class="card-title">Kiértékelés</h5>
+        <div class="card-body">
+            <p>Kerület: @ViewModel.Perimeter</p>
+            <p>Terület: @ViewModel.Area</p>
+        </div>
+    </div>
+}
+
 @code {
     [Inject]
     public ISquareViewModel? ViewModel { get; set; }
